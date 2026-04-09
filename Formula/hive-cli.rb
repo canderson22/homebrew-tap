@@ -1,19 +1,19 @@
 class HiveCli < Formula
   desc "Multi-session Claude Code coordinator"
   homepage "https://github.com/canderson22/hive"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/canderson22/hive/releases/download/v#{version}/hive-darwin-arm64"
-      sha256 "6b432e3f3f5b6227825a647ec9d0072359abb35f44db3f2260c26dd7b4111128"
+      sha256 "60738199d3ae6ffcd7e2d578d83497886d114afedc7a88ff615505f43e3a44a8"
 
       def install
         bin.install "hive-darwin-arm64" => "hive"
       end
     elsif Hardware::CPU.intel?
       url "https://github.com/canderson22/hive/releases/download/v#{version}/hive-darwin-x64"
-      sha256 "28b9e11fad3c091ccc200684547079f8e2f3db0e1c046ad25ae522b9e9a32a4e"
+      sha256 "3270aecae4ded34a06d6cb39ad6957d92e27cea7a179e6634b7a5ad6ddcd9b19"
 
       def install
         bin.install "hive-darwin-x64" => "hive"
@@ -23,7 +23,7 @@ class HiveCli < Formula
 
   on_linux do
     url "https://github.com/canderson22/hive/releases/download/v#{version}/hive-linux-x64"
-    sha256 "85adad5440d61c8abeb41681fdc307473f984c1d5efab3dcc8bc1eb1e356daa7"
+    sha256 "c37953fc9527b22aab769aeedb2400c76d67be02fcc9cde3e20da32e647999ea"
 
     def install
       bin.install "hive-linux-x64" => "hive"
